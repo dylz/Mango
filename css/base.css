@@ -25,3 +25,36 @@
 	background-color:inherit;
 	color:#222;
 }
+
+.btn-primary:hover{
+	border-color: #f60;
+	background-color:#FF9805 ;
+	background-image:none;
+}
+
+.bigform{
+	text-align: center;
+	width: 1300px;
+	overflow: hidden;
+}
+.biginput{
+	float: none
+}
+
+.biginput{
+	margin-top: 50px;
+}
+
+.biginput img{
+	position: absolute;
+	left: 22px;
+	top: 9px;	
+}
+
+.biginput input[type=text]{
+	padding-left:30px;
+}
+
+.biglefttext{
+	text-align: left;
+}
