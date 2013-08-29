@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
     <head>
         <meta charset="utf-8">
         <title>Flavrl</title>
@@ -13,20 +13,25 @@
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/user.js"></script>
+
     </head>
     <body>   
-        <div class="navbar layer3">
+        <div class="navbar layer3" >
             <div class="navbar-inner">
                 <div class="navbar-brand" >Flavrl</div>
                 <div class="nav-collapse">
-                    <ul class="nav pull-right">
-                        <li>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <img src="https://www.gravatar.com/avatar/41d1ff4075fd0b2919860578addc8113?s=32&d=identicon&r=PG"/>
+                    <ul class="nav pull-right" ng-controller="userInfo">
+                        <li ng-show="userInfo.loggedIn">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                                <img title="{{userInfo.name}} ({{userInfo.email}})" ng-src="{{userInfo.headerImage}}"/>
                             </a>
-                            <ul class="dropdown-menu force-arrow pull-right">
+                            <ul class="dropdown-menu pull-right">
                                 <li><a href="">Log Out</a></li>
                             </ul>
+                        </li>
+                        <li ng-show="!userInfo.loggedIn">
+                            <a href="">Sign In</a>
                         </li>
                     </ul>   
                 </div>

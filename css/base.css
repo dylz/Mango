@@ -5,13 +5,23 @@
 .navbar .nav > li > a {
 	font-size: 18px;
 	padding: 0;
-	margin-top:4px;
+	margin-top:7px;
+	color:white;
 }
 
-.navbar .nav > li > a:hover {
+.navbar .nav > li > a.dropdown-toggle{
+	margin-top: 4px
+}
+
+.navbar .nav > li > a.dropdown-toggle:hover {
 	opacity: 0.8
 }
 
 .navbar .nav.pull-right{
 	padding-right: 15px;
+}
+
+.nav > li > a:hover{
+	background-color:inherit;
+	color:#222;
 }
