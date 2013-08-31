@@ -25,36 +25,96 @@
 	background-color:inherit;
 	color:#222;
 }
-
+.navbar .btn-link{
+	color: white;
+	text-decoration: none;
+}
+.navbar .btn-link:hover{
+	background: #f60;
+}
+.navbar .navbar-brand{
+	border-right: 1px solid #ddd;
+}
 .btn-primary:hover{
 	border-color: #f60;
 	background-color:#FF9805 ;
 	background-image:none;
 }
 
-.bigform{
-	text-align: center;
-	width: 1300px;
-	overflow: hidden;
+.searchbars{
+	width: 100%;
 }
-.biginput{
-	float: none
+.searchbars .col-lg-8{
+	margin: 0 auto;
+	float: none;
 }
-
-.biginput{
-	margin-top: 50px;
+.searchbars .form-control{
+	padding-left: 30px;
 }
-
-.biginput img{
+.searchbars .inputlogo{
 	position: absolute;
 	left: 22px;
-	top: 9px;	
+	top: 9px;
+	z-index: 2
 }
 
-.biginput input[type=text]{
-	padding-left:30px;
+.sidebar{
+	position: fixed;
+	margin-top: -20px;
+	height: 100%;
+	padding: 0;
+}
+.sidebar ul > li > a{
+	padding: 5px 10px;
+}
+.sidebar > ul{
+	margin-top: 20px;
+	
+}
+.sidebar ul > li > a,
+.sidebar .nav-header{
+	padding: 5px 10px;	
+}
+.sidebar ul > li:hover:not(.nav-header),
+.sidebar ul > li > a:hover{
+	color: #f60;
+	background: #ddd
+}
+.content{
+	margin-left:233px;
+}
+.thumbs{
+	list-style-type: none;
+	padding:10px;
+}
+.thumbs > li{
+	width:220px;
+}
+.thumbs > li > a{
+	height: 110px;
+	padding: 10px;
+	background: white;
+}
+.thumbs > li > a:hover{
+	text-decoration: none;
+	color:#f60;
+}
+.thumbs .main-header{
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 20px;
+	z-index: 1;
 }
 
-.biglefttext{
-	text-align: left;
+.thumbs .sub-header{
+	color: #222;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 1;
 }

@@ -20,6 +20,16 @@
         <div class="navbar layer3" >
             <div class="navbar-inner">
                 <div class="navbar-brand" >Flavrl</div>
+                <button type="button" class="btn btn-link dropdown-toggle pull-left" data-toggle="dropdown" tabindex="-1">
+                    <i class="icon-sort-down"></i>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#/flavmarks">FlavMarks</a></li>
+                    <li><a href="#">Flavoursnaps</a></li>
+                    <li><a href="#">Flavourzone</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Get Apps</a></li>
+                </ul>
                 <div class="nav-collapse">
                     <ul class="nav pull-right" ng-controller="userInfo">
                         <li ng-show="userInfo.loggedIn">
@@ -37,17 +47,60 @@
                 </div>
             </div>
         </div>
-        <form class="form-inline bigform" role="form">
-            
-            <div class="form-group col-lg-8 biginput input-group btn-group">
-                <!--<div class="biglefttext">
-                    Search: Google
-                </div>-->
-                <img src="https://plus.google.com/_/favicon?domain=google.com"/>
-                <input type="text" class="form-control" placeholder="Search"/>
-                <button type="button" class="btn btn-primary">Action</button>
+        <div class="searchbars">
+            <div class="col-lg-8">
+                <img class="inputlogo" src="https://plus.google.com/_/favicon?domain=google.com"/>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Google">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" tabindex="-1">
+                            <i class="icon-search"></i>
+                        </button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
         <hr/>
+        <div class="sidebar well col-xs-2">
+            <ul class="nav">
+                <li class="nav-header">Sidebar</li>
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="nav-header">Sidebar</li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="nav-header">Sidebar</li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div>
+                <ul class="thumbs">
+                    <li>
+                        <a href="https://webmail.codesyne.com:2096/cpsess5235622455/3rdparty/roundcube/?_task=mail" target="_blank" class="thumbnail" style="border-top:5px solid #4711ae">
+                            <div class="main-header" title="Codesyne Mail">
+                                Codesyne Mail
+                            </div>
+                            <div class="sub-header" title="webmail.codesyne.com"><img src="http://www.google.com/s2/u/0/favicons?domain=webmail.codesyne.com"> 
+                                webmail.codesyne.com
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html> 
