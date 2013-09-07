@@ -1,5 +1,9 @@
 /* BASE CSS */
 
+.ng-cloak{
+	display: none
+}
+
 /* HEADER BAR */
 
 .navbar .nav > li > a {
@@ -81,7 +85,7 @@
 	background: #ddd
 }
 .content{
-	margin-left:233px;
+	margin-left:17%;
 }
 .thumbs{
 	list-style-type: none;
