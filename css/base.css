@@ -32,13 +32,13 @@
 .navbar .btn-link{
 	color: white;
 	text-decoration: none;
+	position: relative;
+	left: -10px
 }
 .navbar .btn-link:hover{
 	background: #f60;
 }
-.navbar .navbar-brand{
-	border-right: 1px solid #ddd;
-}
+
 .btn-primary:hover{
 	border-color: #f60;
 	background-color:#FF9805 ;
