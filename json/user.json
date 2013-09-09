@@ -2,5 +2,23 @@
    "loggedIn":true,
    "name":"Dylan",
    "email":"dylan@demoe.ca",
-   "headerImage":"https:\/\/www.gravatar.com\/avatar\/41d1ff4075fd0b2919860578addc8113?s=32&d=identicon&r=PG"
+   "headerImage":"https:\/\/www.gravatar.com\/avatar\/41d1ff4075fd0b2919860578addc8113?s=32&d=identicon&r=PG",
+   "apps":[
+      {
+         "name":"Flavrl",
+         "href":""
+      },
+      {
+         "name":"Flavourpages",
+         "href":"flavourpages"
+      },
+      {
+         "name":"Flavoursnaps",
+         "href":"flavoursnaps"
+      },
+      {
+         "name":"Flavourzone",
+         "href":"flavourzone"
+      }
+   ]
 }

@@ -1,0 +1,7 @@
+{
+	"app":"flavourpages",
+	"version":0.1,
+	"brand":"Flavourpages",
+	"stylesheets":["styles.css"],
+	"scripts":["scripts.js","modal.scripts.js"]
+}

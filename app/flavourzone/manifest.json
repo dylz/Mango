@@ -1,0 +1,7 @@
+{
+	"app":"flavourzone",
+	"version":0.1,
+	"brand":"Flavourzone",
+	"stylesheets":["styles.css"],
+	"scripts":["scripts.js"]
+}
