@@ -5,6 +5,14 @@
 	"stylesheets":["styles.css"],
 	"scripts":["scripts.js","modal.scripts.js"],
 
+	"input":{
+		"type":"blender",
+		"icon":"icon-plus",
+		"placeholder":"Add Tab",
+		"goIcon":"icon-ok",
+		"dropdown":[]
+	},
+
 	"sidebar":[
 		["nav-header","Default Tabs"],
 			["","All Links"],

@@ -52,12 +52,16 @@
         </div>
         <div class="searchbars">
             <div class="col-lg-8">
-                <img class="inputlogo" src="https://plus.google.com/_/favicon?domain=google.com"/>
+                <!--<img class="inputlogo" src="https://plus.google.com/_/favicon?domain=google.com"/>
+                -->
+                <i class="{{appInfo.input.icon}} inputlogo icon-large"></i>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Google">
+                    <!--<input type="text" class="form-control" placeholder="Search Google">-->
+                    <input type="text" class="form-control" placeholder="{{appInfo.input.placeholder}}">
                     <div class="input-group-btn">
                         <button type="button" class="btn btn-default" tabindex="-1">
-                            <i class="icon-search"></i>
+                            <!--<i class="icon-search"></i>-->
+                            <i class="{{appInfo.input.goIcon}}"></i>
                         </button>
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
                             <span class="caret"></span>
