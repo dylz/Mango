@@ -10,9 +10,14 @@ function pageStatus($scope,$http,$location){
 	}
 
 	$scope.fetch = function(){
-		$http.get($scope.appJSON).success($scope.loadAppInfo);
+		$http.get($scope.appJSON).success(function(data, status, headers, config){
+			$scope.loadAppInfo(data,status)
+		});
 	}
 
+	$scope.replaceWhitespace = function(item){
+		return item.replace(' ','-');
+	}
 
 	$scope.$on('updatePage', function() {
 		$scope.loc = $location.path();

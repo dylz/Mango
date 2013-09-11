@@ -1,7 +1,7 @@
 /* BASE CSS */
 
-.ng-cloak{
-	display: none
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
 }
 
 /* HEADER BAR */
@@ -46,7 +46,8 @@
 }
 
 .searchbars{
-	width: 100%;
+	width: 83.7%;
+	float: right;
 }
 .searchbars .col-lg-8{
 	margin: 0 auto;
@@ -72,18 +73,56 @@
 	padding: 5px 10px;
 }
 .sidebar > ul{
-	margin-top: 20px;
+	margin-top: 10px;
 	
 }
-.sidebar ul > li > a,
-.sidebar .nav-header{
-	padding: 5px 10px;	
-}
+
 .sidebar ul > li:hover:not(.nav-header),
 .sidebar ul > li > a:hover{
 	color: #f60;
 	background: #ddd
 }
+
+.sidebar ul > .nav-header:first-child{
+	border-top: 0;
+	padding-top:0;
+}
+
+.nav-header{
+	border-top: 1px solid #ddd;
+	padding-top:2px;
+}
+
+.nav-header a{
+	display: block;
+	padding: 3px 15px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #999999;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-transform: uppercase;
+}
+
+.sidebar li.nav-header > a:hover{
+	background: none;
+	color:#999;
+	cursor: default;
+}
+
+.sidebar ul > .active a{
+	color: white;
+	background-color: #f60;
+    background-image: -moz-linear-gradient(top, #FF9805, #F60);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF9805), to(#F60));
+    background-image: -webkit-linear-gradient(top, #FF9805, #F60);
+    background-image: -o-linear-gradient(top, #FF9805, #F60);
+    background-image: linear-gradient(to bottom, #FF9805, #F60);
+    background-repeat: repeat-x;
+    border-color: #f60;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3071a9', GradientType=0);
+}
+
 .content{
 	margin-left:17%;
 }
@@ -121,4 +160,8 @@
 	white-space: nowrap;
 	overflow: hidden;
 	z-index: 1;
+}
+
+.tab-content > div{
+	display: none
 }

@@ -45,6 +45,11 @@
                 </div>
             </div>
         </div>
+        <div class="sidebar well col-xs-2">
+            <ul class="nav">
+                <li ng-repeat="header in appInfo.sidebar" ng-cloak class="{{header[0]}}"><a data-toggle="tab" href="#tab-{{replaceWhitespace(header[1])}}">{{header[1]}}</a></li>
+            </ul>
+        </div>
         <div class="searchbars">
             <div class="col-lg-8">
                 <img class="inputlogo" src="https://plus.google.com/_/favicon?domain=google.com"/>
@@ -68,22 +73,8 @@
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
         <hr/>
-        <div class="sidebar well col-xs-2">
-            <ul class="nav">
-                <li class="nav-header">Sidebar</li>
-                <li class="active"><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li class="nav-header">Sidebar</li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li class="nav-header">Sidebar</li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
-        </div>
         <div id="views" class="content" ng-view>
          
         </div>

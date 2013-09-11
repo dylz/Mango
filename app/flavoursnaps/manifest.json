@@ -3,5 +3,12 @@
 	"version":0.1,
 	"brand":"Flavoursnaps",
 	"stylesheets":["styles.css"],
-	"scripts":["scripts.js"]
+	"scripts":["scripts.js"],
+
+	"sidebar":[
+		["nav-header","Albums"],
+			["active","Lappy"],
+			["","Cottage"],
+			["","Horses"]
+	]
 }

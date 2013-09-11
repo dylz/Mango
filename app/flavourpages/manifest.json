@@ -3,5 +3,18 @@
 	"version":0.1,
 	"brand":"Flavourpages",
 	"stylesheets":["styles.css"],
-	"scripts":["scripts.js","modal.scripts.js"]
+	"scripts":["scripts.js","modal.scripts.js"],
+
+	"sidebar":[
+		["nav-header","Default Tabs"],
+			["","All Links"],
+		["nav-header","My Tabs"],
+			["active","Home"],
+			["","Work"],
+			["","Dev"],
+			["","Test ing"],
+		["nav-header","Other"],
+			["","Archived Links"]
+	]
+
 }
