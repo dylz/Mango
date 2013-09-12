@@ -50,18 +50,14 @@
                 <li ng-repeat="header in appInfo.sidebar" ng-cloak class="{{header[0]}}"><a data-toggle="tab" href="#tab-{{replaceWhitespace(header[1])}}">{{header[1]}}</a></li>
             </ul>
         </div>
-        <div class="searchbars">
+        <!--<div class="searchbars">
             <div class="col-lg-8">
-                <!--<img class="inputlogo" src="https://plus.google.com/_/favicon?domain=google.com"/>
-                -->
-                <i class="{{appInfo.input.icon}} inputlogo icon-large"></i>
+                <img class="inputlogo" src="https://plus.google.com/_/favicon?domain=google.com"/>
                 <div class="input-group">
-                    <!--<input type="text" class="form-control" placeholder="Search Google">-->
-                    <input type="text" class="form-control" placeholder="{{appInfo.input.placeholder}}">
+                    <input type="text" class="form-control" placeholder="Search Google">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-default" tabindex="-1">
-                            <!--<i class="icon-search"></i>-->
-                            <i class="{{appInfo.input.goIcon}}"></i>
+                        <button type="button" class="btn btn-primary" tabindex="-1">
+                            <i class="icon-search"></i>
                         </button>
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
                             <span class="caret"></span>
@@ -78,7 +74,7 @@
             </div>
         </div>
         <div class="clearfix"></div>
-        <hr/>
+        <hr/>-->
         <div id="views" class="content" ng-view>
          
         </div>
