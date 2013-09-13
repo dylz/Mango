@@ -15,17 +15,44 @@
             </div>
 
 -->
-<div class="tab-content">
-    <div class="tab-pane active fade in" id="tab-Home">
-        This is home
+<div id="app-flavourpages" ng-controller="fpControl">
+    <div class="searchbars">
+        <div class="col-lg-8">
+            <i class="icon-{{inputData.icon}} inputlogo icon-large"></i>
+            <div class="input-group">
+                <input type="text" class="form-control focus" placeholder="{{inputData.placeholder}}" ng-enter="goBtn()">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary" tabindex="-1" ng-click="goBtn()">
+                        <i class="icon-{{inputData.goIcon}}"></i>
+                    </button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                        <li ng-repeat="item in inputData.dropdown" ng-show="inputData.placeholder != item.text">
+                            <a ng-click="changeInputView(item)" href="javascript:;">
+                                <i class="icon-{{item.icon}}"></i> {{item.text}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="tab-pane fade" id="tab-Work">
-        This is Work
-    </div>
-    <div class="tab-pane fade" id="tab-Dev">
-        DEVDEV
-    </div>
-    <div class="tab-pane fade" id="tab-Test-ing">
-        DA TEst
+    <div class="clearfix"></div>
+    <hr/>
+    <div class="tab-content">
+        <div class="tab-pane active fade in" id="tab-Home">
+            This is home
+        </div>
+        <div class="tab-pane fade" id="tab-Work">
+            This is Work
+        </div>
+        <div class="tab-pane fade" id="tab-Dev">
+            DEVDEV
+        </div>
+        <div class="tab-pane fade" id="tab-Test-ing">
+            DA TEst
+        </div>
     </div>
 </div>

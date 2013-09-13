@@ -11,12 +11,21 @@ function pageStatus($scope,$http,$location){
 
 	$scope.fetch = function(){
 		$http.get($scope.appJSON).success(function(data, status, headers, config){
-			$scope.loadAppInfo(data,status)
+			$scope.loadAppInfo(data,status);
+			$scope.tabSwitchFocus();
 		});
 	}
 
 	$scope.replaceWhitespace = function(item){
 		return item.replace(' ','-');
+	}
+
+	$scope.tabSwitchFocus = function(){
+		setTimeout(function(){
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				$('#views > div:first .focus').focus();
+			});
+		},1000);
 	}
 
 	$scope.$on('updatePage', function() {
@@ -55,7 +64,6 @@ function userInfo($scope,$http,$location){
 			return false;
 		}
 	}
-
 	$scope.fetch();
 }
 
@@ -64,9 +72,13 @@ function PagesController($scope, $http, $route, $routeParams, $compile) {
 
   if($routeParams.name !== undefined){
   	$route.current.templateUrl = 'app/' + $routeParams.name + '/index.html';
-  	$http.get($route.current.templateUrl).then(function (msg) {
-    	$('#views').html($compile(msg.data)($scope));
-    	$scope.$emit('updatePage');
+  	$.getScript('app/'+$routeParams.name+'/controllers.js',function(){
+  		$http.get($route.current.templateUrl).then(function (msg) {
+    		$('#views').html($compile(msg.data)($scope));
+    		$scope.$emit('updatePage');
+    		$('#views > div:first .focus').focus();
+
+  		});
   	});
   }
   else{
@@ -74,4 +86,3 @@ function PagesController($scope, $http, $route, $routeParams, $compile) {
   }
 }
 PagesController.$inject = ['$scope', '$http', '$route', '$routeParams', '$compile'];
-

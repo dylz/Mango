@@ -45,10 +45,6 @@
 	background-image:none;
 }
 
-.searchbars{
-	width: 83.7%;
-	float: right;
-}
 .searchbars .col-lg-8{
 	margin: 0 auto;
 	float: none;
@@ -59,7 +55,7 @@
 .searchbars .inputlogo{
 	position: absolute;
 	left: 22px;
-	top: 9px;
+	top: 8px;
 	z-index: 2
 }
 
@@ -112,15 +108,7 @@
 
 .sidebar ul > .active a{
 	color: white;
-	background-color: #f60;
-    background-image: -moz-linear-gradient(top, #FF9805, #F60);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF9805), to(#F60));
-    background-image: -webkit-linear-gradient(top, #FF9805, #F60);
-    background-image: -o-linear-gradient(top, #FF9805, #F60);
-    background-image: linear-gradient(to bottom, #FF9805, #F60);
-    background-repeat: repeat-x;
-    border-color: #f60;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3071a9', GradientType=0);
+	background-color: #08c
 }
 
 .content{
