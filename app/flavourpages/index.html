@@ -1,28 +1,11 @@
-<!--
-   <div>
-                <ul class="thumbs">
-                    <li>
-                        <a href="https://webmail.codesyne.com:2096/cpsess5235622455/3rdparty/roundcube/?_task=mail" target="_blank" class="thumbnail" style="border-top:5px solid #4711ae">
-                            <div class="main-header" title="Codesyne Mail">
-                                Codesyne Mail
-                            </div>
-                            <div class="sub-header" title="webmail.codesyne.com"><img src="http://www.google.com/s2/u/0/favicons?domain=webmail.codesyne.com"> 
-                                webmail.codesyne.com
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
--->
 <div id="app-flavourpages" ng-controller="fpControl">
     <div class="searchbars">
         <div class="col-lg-8">
             <i class="icon-{{inputData.icon}} inputlogo icon-large"></i>
             <div class="input-group">
-                <input type="text" class="form-control focus" placeholder="{{inputData.placeholder}}" ng-enter="goBtn()">
+                <input type="text" class="form-control focus" placeholder="{{inputData.placeholder}}" ng-model="input" ng-enter="goBtn(input)">
                 <div class="input-group-btn">
-                    <button type="button" class="btn btn-primary" tabindex="-1" ng-click="goBtn()">
+                    <button type="button" class="btn btn-primary" tabindex="-1" ng-click="goBtn(input)">
                         <i class="icon-{{inputData.goIcon}}"></i>
                     </button>
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
@@ -42,8 +25,8 @@
     <div class="clearfix"></div>
     <hr/>
     <div class="tab-content">
-        <div class="tab-pane active fade in" id="tab-{{tabData.divID}}}">
-            <div ng-repeat="thumb in tabData.content | orderBy:'order'">
+        <div class="tab-pane active fade in" id="tab-{{tabData.divID}}">
+            <div ng-repeat="thumb in tabData.content | orderBy:'order' | filter:filterThumb">
                 <ul class="thumbs">
                     <li>
                         <a href="{{thumb.url}}" target="_blank" class="thumbnail" style="border-top:5px solid #{{thumb.borderColor}}">
@@ -58,14 +41,5 @@
                 </ul>
             </div>
         </div>
-        <!--<div class="tab-pane fade" id="tab-Work">
-            This is Work
-        </div>
-        <div class="tab-pane fade" id="tab-Dev">
-            DEVDEV
-        </div>
-        <div class="tab-pane fade" id="tab-Test">
-            DA TEst
-        </div>-->
     </div>
 </div>

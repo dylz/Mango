@@ -24,3 +24,11 @@ app.directive('ngEnter', function() {
         });
     };
 });
+
+app.directive('ngOnkeyup', function() {
+	return function(scope, elm, attrs) {
+    	elm.bind("keyup", function() {
+      		scope.$apply(attrs.onKeyup);
+    	});
+  	};
+});

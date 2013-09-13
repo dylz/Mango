@@ -2,8 +2,24 @@
 
 /* Page status depending on app */
 function pageStatus($scope,$http,$location,shareTab){
-	
+	$scope.service = shareTab;
 	$scope.appInfo = [];
+	
+	$scope.$watch('service.retrieveTab()', function(data) {
+    	if((data != '') && (data != undefined)){
+    		split = data.split(';');
+    		tab = split[0];
+    		section = split[1];
+    		sectionLen = $scope.countTabLen(section);
+    		console.log({"section":section, "order": sectionLen, "header":false ,"name":tab,"id":99})
+    		$scope.appInfo.sidebar.push({"section":parseInt(section), "order": sectionLen, "header":false ,"name":tab,"id":99});
+    		$scope.setSort();
+    	}
+	});
+
+	$scope.setSort = function(){
+		$scope.tabSort = ['section','order'];
+	}
 
 	$scope.loadAppInfo = function(data,status){
 		$scope.appInfo = data;
@@ -14,6 +30,17 @@ function pageStatus($scope,$http,$location,shareTab){
 			$scope.loadAppInfo(data,status);
 			$scope.tabSwitchFocus();
 		});
+	}
+
+	$scope.countTabLen = function(section){
+		a = $scope.appInfo.sidebar;
+		result = 0;
+		for(i = 0; i < a.length; ++i) {
+		    if(a[i].section == section){
+		    	result++;
+		    }
+		}
+		return result;
 	}
 
 	$scope.replaceWhitespace = function(item){

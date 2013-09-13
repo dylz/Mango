@@ -112,14 +112,15 @@
 }
 
 .content{
-	margin-left:17%;
+	margin-left:13%;
 }
 .thumbs{
 	list-style-type: none;
-	padding:10px;
 }
 .thumbs > li{
-	width:220px;
+	width:240px;
+	padding-bottom:10px;
+	padding-right:10px;
 }
 .thumbs > li > a{
 	height: 110px;
@@ -148,6 +149,10 @@
 	white-space: nowrap;
 	overflow: hidden;
 	z-index: 1;
+}
+
+.tab-content{
+	margin-left:50px;
 }
 
 .tab-content > div{

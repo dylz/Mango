@@ -35,11 +35,16 @@ function fpControl($scope,$http,shareTab){
     	}
 	});
 
+	$scope.filterThumbs = function(input){
+		$scope.filterThumb = input;
+	}
+
 	$scope.replaceWhitespace = function(item){
 		return item.replace(' ','-');
 	}
 
 	$scope.changeInputView = function(item){
+		console.log(item)
 		$scope.inputData.type = item.type;
 		$scope.inputData.placeholder = item.text;
 		$scope.inputData.icon = item.icon;
@@ -47,23 +52,23 @@ function fpControl($scope,$http,shareTab){
 		$('#app-flavourpages .focus').focus();
 	}
 
-	$scope.goBtn = function(){
+	$scope.goBtn = function(input){
 		$scope.type = $scope.inputData.type;
-		console.log(shareTab.getTab())
 		switch($scope.type){
 			case "link":{
 				console.log("A link will be added")
 			}
 			break;
 			case "tab":{
-				console.log("A tab will be added NOW!")
+				shareTab.queueTab(input,2);
 			}
 			break;
 			case "search":{
-				console.log("You are searching flavourpages vroom")
+				$scope.filterThumbs(input);
 			}
 			break;
 		}
+		$scope.input = '';
 	}
 
 	$scope.loadTabInfo = function(data,status){
@@ -77,4 +82,5 @@ function fpControl($scope,$http,shareTab){
 	}
 
 	$scope.fetch();
+
 }

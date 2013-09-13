@@ -6,15 +6,15 @@
 	"scripts":["scripts.js","modal.scripts.js"],
 
 	"sidebar":[
-		{"header":true  ,"name":"Default Tabs"	,"id":""},
-		{"header":false ,"name":"All Links"   	,"id":"all"},
-		{"header":true  ,"name":"My Tabs"     	,"id":""},
-		{"header":false ,"name":"Home"        	,"id":6},
-		{"header":false ,"name":"Work" 	   	  	,"id":16},
-		{"header":false ,"name":"Dev"  	   	  	,"id":84},
-		{"header":false ,"name":"Test"		  	,"id":106},	
-		{"header":true  ,"name":"Other"		  	,"id":""},
-		{"header":false ,"name":"Archived Links","id":"archived"}
+		{"section":1, "order": 0, "header":true  ,"name":"Default Tabs"	,"id":""},
+		{"section":1, "order": 1, "header":false ,"name":"All Links"   	,"id":"all"},
+		{"section":2, "order": 0, "header":true  ,"name":"My Tabs"     	,"id":""},
+		{"section":2, "order": 1, "header":false ,"name":"Home"        	,"id":6},
+		{"section":2, "order": 2, "header":false ,"name":"Work" 	   	,"id":16},
+		{"section":2, "order": 3, "header":false ,"name":"Dev"  	   	,"id":84},
+		{"section":2, "order": 4, "header":false ,"name":"Test"		  	,"id":106},	
+		{"section":3, "order": 0, "header":true  ,"name":"Other"		,"id":""},
+		{"section":3, "order": 1, "header":false ,"name":"Archived Links","id":"archived"}
 	],
 	"activeTab": 6
 

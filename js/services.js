@@ -11,6 +11,7 @@ appservice.value('version', '0.1');
 
 appservice.service('shareTab',function(){
 	var tab = '';
+	var section = '';
 
 	 return {
         getTab: function () {
@@ -18,6 +19,13 @@ appservice.service('shareTab',function(){
         },
         setTab: function(value) {
             tab = value;
+        },
+        queueTab: function(value,vsection,vorder){
+        	tab = value;
+        	section = ';'+vsection;
+        },
+        retrieveTab: function(){
+        	return tab+section;
         }
     };
 });
