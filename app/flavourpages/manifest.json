@@ -6,15 +6,16 @@
 	"scripts":["scripts.js","modal.scripts.js"],
 
 	"sidebar":[
-		["nav-header","Default Tabs"],
-			["","All Links"],
-		["nav-header","My Tabs"],
-			["active","Home"],
-			["","Work"],
-			["","Dev"],
-			["","Test ing"],
-		["nav-header","Other"],
-			["","Archived Links"]
-	]
+		{"header":true  ,"name":"Default Tabs"	,"id":""},
+		{"header":false ,"name":"All Links"   	,"id":"all"},
+		{"header":true  ,"name":"My Tabs"     	,"id":""},
+		{"header":false ,"name":"Home"        	,"id":6},
+		{"header":false ,"name":"Work" 	   	  	,"id":16},
+		{"header":false ,"name":"Dev"  	   	  	,"id":84},
+		{"header":false ,"name":"Test"		  	,"id":106},	
+		{"header":true  ,"name":"Other"		  	,"id":""},
+		{"header":false ,"name":"Archived Links","id":"archived"}
+	],
+	"activeTab": 6
 
 }

@@ -42,17 +42,30 @@
     <div class="clearfix"></div>
     <hr/>
     <div class="tab-content">
-        <div class="tab-pane active fade in" id="tab-Home">
-            This is home
+        <div class="tab-pane active fade in" id="tab-{{tabData.divID}}}">
+            <div ng-repeat="thumb in tabData.content | orderBy:'order'">
+                <ul class="thumbs">
+                    <li>
+                        <a href="{{thumb.url}}" target="_blank" class="thumbnail" style="border-top:5px solid #{{thumb.borderColor}}">
+                            <div class="main-header" title="{{thumb.name}}">
+                                {{thumb.name}}
+                            </div>
+                            <div class="sub-header" title="{{thumb.domain}}"><img ng-src="{{thumb.img}}"> 
+                                {{thumb.domain}}
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="tab-pane fade" id="tab-Work">
+        <!--<div class="tab-pane fade" id="tab-Work">
             This is Work
         </div>
         <div class="tab-pane fade" id="tab-Dev">
             DEVDEV
         </div>
-        <div class="tab-pane fade" id="tab-Test-ing">
+        <div class="tab-pane fade" id="tab-Test">
             DA TEst
-        </div>
+        </div>-->
     </div>
 </div>

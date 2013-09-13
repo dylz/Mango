@@ -1,7 +1,7 @@
 /*Controllers */
 
 /* Page status depending on app */
-function pageStatus($scope,$http,$location){
+function pageStatus($scope,$http,$location,shareTab){
 	
 	$scope.appInfo = [];
 
@@ -18,6 +18,20 @@ function pageStatus($scope,$http,$location){
 
 	$scope.replaceWhitespace = function(item){
 		return item.replace(' ','-');
+	}
+
+	$scope.determineClass = function(tab){
+		if(tab.id == $scope.appInfo.activeTab){
+			return 'active';
+		}
+		else if(tab.header){
+			return 'nav-header';
+		}
+	}
+
+	$scope.tabSwitch = function(tab){
+		$scope.appInfo.activeTab = tab.id
+		shareTab.setTab(tab);
 	}
 
 	$scope.tabSwitchFocus = function(){

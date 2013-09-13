@@ -1,0 +1,42 @@
+[
+   {
+      "status":"success",
+      "order":"0",
+      "id":"16",
+      "url":"https:\/\/webmail.codesyne.com:2096\/cpsess5235622455\/3rdparty\/roundcube\/?_task=mail",
+      "name":"Codesyne Mail",
+      "domain":"webmail.codesyne.com",
+      "img":"http:\/\/www.google.com\/s2\/u\/0\/favicons?domain=webmail.codesyne.com",
+      "borderColor":"4711ae"
+   },
+   {
+      "status":"success",
+      "order":"1",
+      "id":"72",
+      "url":"https:\/\/advisor-source.cooperators.ca\/?edge=1",
+      "name":"Advisor Source Cooperators",
+      "domain":"advisor-source.cooperators.ca",
+      "img":"http:\/\/www.google.com\/s2\/u\/0\/favicons?domain=advisor-source.cooperators.ca",
+      "borderColor":"133aac"
+   },
+   {
+      "status":"success",
+      "order":"2",
+      "id":"73",
+      "url":"http:\/\/dev.aholattafun.com\/1726\/modBlocksUIWorked\/main.php",
+      "name":"ModBlocks",
+      "domain":"dev.aholattafun.com",
+      "img":"http:\/\/www.google.com\/s2\/u\/0\/favicons?domain=dev.aholattafun.com",
+      "borderColor":"000000"
+   },
+   {
+      "status":"success",
+      "order":"3",
+      "id":"77",
+      "url":"https:\/\/aholattafun.freshbooks.com\/",
+      "name":"Codesyne Inc. Client Login Page",
+      "domain":"aholattafun.freshbooks.com",
+      "img":"http:\/\/www.google.com\/s2\/u\/0\/favicons?domain=aholattafun.freshbooks.com",
+      "borderColor":"cb09ed"
+   }
+]
