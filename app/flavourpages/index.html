@@ -28,7 +28,10 @@
         <div class="tab-pane active fade in" id="tab-{{tabData.divID}}">
             <div ng-repeat="thumb in tabData.content | orderBy:'order' | filter:filterThumb">
                 <ul class="thumbs">
-                    <li>
+                    <li ng-mouseover="thumb.highlight=true" ng-mouseleave="thumb.highlight=false">
+                        <div class="btn-group pull-right" ng-show="thumb.highlight">
+                            <button class="btn btn-default" data-toggle="modal" data-target="#fp-modal" ng-click="setEditModal(thumb)"><i class="icon-edit"></i></button>
+                        </div>
                         <a href="{{thumb.url}}" target="_blank" class="thumbnail" style="border-top:5px solid #{{thumb.borderColor}}">
                             <div class="main-header" title="{{thumb.name}}">
                                 {{thumb.name}}
@@ -42,4 +45,31 @@
             </div>
         </div>
     </div>
+     <div class="modal fade" id="fp-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Edit Link</h4>
+        </div>
+        <div class="modal-body">
+            <div>
+                <form class="form-inline" role="form">
+                    <div class="form-group col-sm-5">
+                        <input type="text" class="form-control" placeholder="URL" title="URL" ng-model="editUrl">
+                    </div>
+                    <div class="form-group col-sm-5">
+                        <input type="text" class="form-control" placeholder="Name" ng-model="editName">
+                    </div>
+                    <button class="btn btn-danger delete-link" data-dismiss="modal" ng-click="archiveLink()"><i class="icon-trash"></i> Archive</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="saveLink(editName,editUrl)">Save</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 </div>

@@ -1,5 +1,6 @@
 /*Controller*/
 function fpControl($scope,$http,shareTab){
+
 	$scope.inputData = {
 		type: "link",
 		icon:"link",
@@ -34,6 +35,33 @@ function fpControl($scope,$http,shareTab){
     		$scope.fetch();
     	}
 	});
+
+	$scope.setEditModal = function(item){
+		$scope.editItem = item;
+		$scope.editUrl = item.url;
+		$scope.editName = item.name;
+	}
+
+	$scope.saveLink = function(ename,eurl){
+		var r = $scope.getObject();
+		r.name = ename;
+		r.url = eurl;
+		$('#fp-modal').modal('hide');
+	}
+
+	$scope.archiveLink = function(){
+		var r = $scope.getObject(),
+		index = $scope.tabData.content.indexOf(r);
+		$scope.tabData.content.splice(index,1);
+	}
+
+	$scope.getObject = function(){
+		var edit = $scope.editItem;
+		var result = $scope.tabData.content.filter(function( obj ) {
+  			return obj.id == edit.id;
+		});
+		return result[0];
+	}
 
 	$scope.filterThumbs = function(input){
 		$scope.filterThumb = input;

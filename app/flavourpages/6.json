@@ -1,5 +1,6 @@
 [
    {
+      "highlight":false,
       "order":0,
       "id":"6",
       "url":"http:\/\/dev.flavrl.com\/",
@@ -9,6 +10,7 @@
       "borderColor":"ff7f00"
    },
    {
+      "highlight":false,
       "order":1,
       "id":"5",
       "url":"http:\/\/devapps.flavrl.com\/",
@@ -18,6 +20,7 @@
       "borderColor":"ff7f00"
    },
    {
+      "highlight":false,
       "order":2,
       "id":"3",
       "url":"http:\/\/gmail.com",
@@ -27,6 +30,7 @@
       "borderColor":"ff0000"
    },
    {
+      "highlight":false,
       "order":3,
       "id":"31",
       "url":"http:\/\/drive.google.com",
@@ -36,6 +40,7 @@
       "borderColor":"00cc00"
    },
    {
+      "highlight":false,
       "order":4,
       "id":"1",
       "url":"https:\/\/play.google.com\/music\/listen",
@@ -45,6 +50,7 @@
       "borderColor":"00cc00"
    },
    {
+      "highlight":false,
       "order":5,
       "id":"4",
       "url":"http:\/\/outlook.com",
@@ -54,6 +60,7 @@
       "borderColor":"ff6633"
    },
    {
+      "highlight":false,
       "order":6,
       "id":"2",
       "url":"http:\/\/reddit.com",
@@ -63,6 +70,7 @@
       "borderColor":"CCFFFF"
    },
    {
+      "highlight":false,
       "order":7,
       "id":"33",
       "url":"http:\/\/www.tcgplayer.com",
@@ -72,6 +80,7 @@
       "borderColor":"000000"
    },
    {
+      "highlight":false,
       "order":8,
       "id":"54",
       "url":"http:\/\/www.reddit.com\/r\/webdev\/",
@@ -81,6 +90,7 @@
       "borderColor":"CCFFFF"
    },
    {
+      "highlight":false,
       "order":9,
       "id":"32",
       "url":"http:\/\/www.reddit.com\/r\/yugioh",
@@ -90,6 +100,7 @@
       "borderColor":"CCFFFF"
    },
    {
+      "highlight":false,
       "order":10,
       "id":"51",
       "url":"http:\/\/yugiohcardguide.com",
@@ -99,6 +110,7 @@
       "borderColor":"cb09ed"
    },
    {
+      "highlight":false,
       "order":11,
       "id":"7",
       "url":"http:\/\/trello.com",
@@ -108,6 +120,7 @@
       "borderColor":"336699"
    },
    {
+      "highlight":false,
       "order":12,
       "id":"75",
       "url":"http:\/\/wallbase.cc",
@@ -117,6 +130,7 @@
       "borderColor":"e80550"
    },
    {
+      "highlight":false,
       "order":13,
       "id":"76",
       "url":"http:\/\/mint.com",
@@ -126,19 +140,17 @@
       "borderColor":"000000"
    },
    {
+      "highlight":false,
       "order":14,
       "id":"101",
       "url":"http:\/\/www.animefreak.tv\/watch\/code-geass-lelouch-rebellion-r2-english-dubbed-online-free",
       "name":"Watch Code Geass: Lelouch of the Rebellion Online | English Dubbed-Subbed Episodes",
       "domain":"www.animefreak.tv",
       "img":"http:\/\/www.google.com\/s2\/u\/0\/favicons?domain=www.animefreak.tv",
-      "borderColor":"ffcccc",
-      "note":"21",
-      "special":"",
-      "tabName":"Home",
-      "edit":1
+      "borderColor":"ffcccc"
    },
    {
+      "highlight":false,
       "order":15,
       "id":"103",
       "url":"http:\/\/www.youtube.com\/watch?v=mvhKNXHQqyM",
@@ -148,6 +160,7 @@
       "borderColor":"990000"
    },
    {
+      "highlight":false,
       "order":16,
       "id":"112",
       "url":"http:\/\/www.pandora.com\/",
@@ -157,6 +170,7 @@
       "borderColor":"99cccc"
    },
    {
+      "highlight":false,
       "order":17,
       "id":"114",
       "url":"http:\/\/youtube.com",
@@ -166,6 +180,7 @@
       "borderColor":"990000"
    },
    {
+      "highlight":false,
       "order":18,
       "id":"115",
       "url":"http:\/\/tdcanadatrust.com",
@@ -175,6 +190,7 @@
       "borderColor":"009900"
    },
    {
+      "highlight":false,
       "order":19,
       "id":"117",
       "url":"https:\/\/github.com\/dylz\/Mango",
