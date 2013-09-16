@@ -1,5 +1,5 @@
 /*Controller*/
-function fpControl($scope,$http,shareTab){
+function fpControl($scope,$http,$timeout,shareTab){
 
 	$scope.inputData = {
 		type: "link",
@@ -20,6 +20,15 @@ function fpControl($scope,$http,shareTab){
     	content:[]
     }
 
+    $scope.colourSetOne = ["FF0000", "FF7F00", "0772A1", "133AAC"];
+    $scope.colourSetTwo = ["00CC00", "007536", "4711AE", "8807BA"];
+    $scope.colourSetThree = ["828282","000000","B50000","17CED1"];
+
+    $scope.selected = '';
+    $scope.colour = '';
+    $scope.customColour = '';
+    $scope.customClass = '';
+
     $scope.tabContent = 'app/flavourpages/'+$scope.tabData.id+'.json';
     $scope.service = shareTab;
 
@@ -36,16 +45,43 @@ function fpControl($scope,$http,shareTab){
     	}
 	});
 
+	$scope.modalEvent = $timeout(function(){
+		$('#fp-modal').on('hidden.bs.modal', function () {
+		  	$scope.selected = '';
+		    $scope.colour = '';
+    		$scope.customColour = '';
+		    $scope.customClass = '';
+		});
+	},1000);
+
+	$scope.setColour = function(colour,item){
+		$scope.colour = colour;
+		$scope.selected = item;
+
+		if(item == 'Custom'){
+    		$scope.customColour = colour;
+			$scope.customClass = 'btn-colour';
+		}
+	}
+
+	$scope.colourClass = function(item){
+		if($scope.selected == item){
+			return "selected";
+		}
+	}
+
 	$scope.setEditModal = function(item){
 		$scope.editItem = item;
 		$scope.editUrl = item.url;
 		$scope.editName = item.name;
+		$scope.editBC = item.borderColor;
 	}
 
-	$scope.saveLink = function(ename,eurl){
+	$scope.saveLink = function(ename,eurl,eBC){
 		var r = $scope.getObject();
 		r.name = ename;
 		r.url = eurl;
+		r.borderColor = eBC;
 		$('#fp-modal').modal('hide');
 	}
 

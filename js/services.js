@@ -20,7 +20,7 @@ appservice.service('shareTab',function(){
         setTab: function(value) {
             tab = value;
         },
-        queueTab: function(value,vsection,vorder){
+        queueTab: function(value,vsection){
         	tab = value;
         	section = ';'+vsection;
         },

@@ -7,6 +7,9 @@
 #app-flavourpages .modal-c-section > div{
 	padding-right:10px;
 }
+#app-flavourpages .modal-c-section > div button.selected{
+	border: 1px solid green;
+}
 #app-flavourpages .modal-c-section ul{
 	min-width: 90px;
 }
@@ -30,9 +33,9 @@
 }
 #app-flavourpages .btn-colour-group div{
 	left: 0;
+	margin-left: 4px;
 }
 #app-flavourpages .btn-colour-group div:hover{
 	cursor: pointer;
 	opacity: 0.8;
 }
-/*border: 1px solid green;*/
