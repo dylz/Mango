@@ -2,7 +2,7 @@
 <html ng-app="flavrl" ng-controller="pageStatus">
     <head>
         <meta charset="utf-8">
-        <title>{{appInfo.brand}}</title>
+        <title ng-bind="appInfo.brand"></title>
     
         <link href="css/bootstrap.css" rel="stylesheet"/>
         <link href="css/bootstrap.theme.css" rel="stylesheet"/>
@@ -11,41 +11,51 @@
         <link ng-repeat="stylesheet in appInfo.stylesheets" ng-href="app/{{appInfo.app}}/{{stylesheet}}"  rel="stylesheet" />
 
     </head>
-    <body>   
-        <div class="navbar layer3" ng-controller="userInfo">
-            <div class="navbar-inner">
-                <div class="navbar-brand ng-cloak" >{{appInfo.brand}}</div>
-                <button type="button" class="btn btn-link dropdown-toggle pull-left" data-toggle="dropdown" tabindex="-1">
-                    <i class="icon-sort-down"></i>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li ng-repeat="app in userInfo.apps" ng-show="currentAppCheck(app.href)"><a href="#/{{app.href}}">{{app.name}}</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Get Apps</a></li>
-                </ul>
-                <div class="nav-collapse">
-                    <ul class="nav pull-right ng-cloak" >
-                        <li ng-show="userInfo.loggedIn">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
-                                <img title="{{userInfo.name}} ({{userInfo.email}})" ng-src="{{userInfo.headerImage}}"/>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li><a href="">Log Out</a></li>
-                            </ul>
-                        </li>
-                        <li ng-show="!userInfo.loggedIn">
-                            <a href="">Sign In</a>
-                        </li>
-                    </ul>   
+    <body>
+        <div ng-controller="userInfo">   
+            <div class="navbar layer3">
+                <div class="navbar-inner">
+                    <div class="navbar-brand ng-cloak" >{{appInfo.brand}}</div>
+                    <button type="button" class="btn btn-link dropdown-toggle pull-left ng-cloak" data-toggle="dropdown" tabindex="-1" ng-show="userInfo.loggedIn">
+                        <i class="icon-sort-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li ng-repeat="app in userInfo.apps" ng-show="currentAppCheck(app.href)"><a href="#/{{app.href}}">{{app.name}}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Get Apps</a></li>
+                    </ul>
+                    <div class="nav-collapse">
+                        <ul class="nav pull-right ng-cloak" >
+                            <li ng-show="userInfo.loggedIn">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                                    <img title="{{userInfo.name}} ({{userInfo.email}})" ng-src="{{userInfo.headerImage}}"/>
+                                </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Log Out</a></li>
+                                </ul>
+                            </li>
+                            <li ng-show="!userInfo.loggedIn">
+                                <form class="navbar-form navbar-right">
+                                    <div class="form-group">
+                                      <input type="text" placeholder="Email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="password" placeholder="Password" class="form-control">
+                                    </div>
+                                    <button type="submit" class="btn btn-blue">Sign in</button>
+                                  </form>
+                            </li>
+                        </ul>   
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="sidebar well col-xs-2">
-            <ul class="nav">
-                <li ng-repeat="tab in appInfo.sidebar | orderBy:tabSort" ng-cloak class="{{determineClass(tab)}}">
-                    <a ng-click="tabSwitch(tab)" data-toggle="tab" href="#">{{tab.name}}</a>
-                </li>
-            </ul>
+            <div class="sidebar well col-xs-2" ng-show="userInfo.loggedIn" ng-cloak>
+                <ul class="nav">
+                    <li ng-repeat="tab in appInfo.sidebar | orderBy:tabSort" ng-cloak class="{{determineClass(tab)}}">
+                        <a ng-click="tabSwitch(tab)" data-toggle="tab" href="#">{{tab.name}}</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div id="views" class="content" ng-view>
          

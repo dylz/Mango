@@ -81,6 +81,10 @@ function pageStatus($scope,$http,$location,shareTab){
 		}
 		$scope.fetch();
 	});
+
+	$scope.$on('brandUpdate', function() {
+		$scope.appInfo.brand = 'Flavrl';
+	});
 }
 
 /*Load the Users info */
@@ -89,7 +93,15 @@ function userInfo($scope,$http,$location){
 	$scope.userInfo = [];
 
 	$scope.loadUserInfo = function(data,status){
-		$scope.userInfo = data;
+		if(data.loggedIn){
+			$scope.userInfo = data;
+			if($location.path()=='/login'){
+				$location.path('/');
+			}
+		}
+		else{
+			$scope.notLoggedIn();
+		}
 	}
 
 	$scope.fetch = function(){
@@ -105,12 +117,17 @@ function userInfo($scope,$http,$location){
 			return false;
 		}
 	}
+
+	$scope.notLoggedIn = function(){
+		$location.path('/login');
+		$scope.$emit('brandUpdate');
+	}
+
 	$scope.fetch();
 }
 
 /* Page Controllers For routing */
-function PagesController($scope, $http, $route, $routeParams, $compile) {
-
+function PagesController($scope, $http, $route, $routeParams, $compile,$location) {
   if($routeParams.name !== undefined){
   	$route.current.templateUrl = 'app/' + $routeParams.name + '/index.html';
   	$.getScript('app/'+$routeParams.name+'/controllers.js',function(){
