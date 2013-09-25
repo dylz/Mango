@@ -7,17 +7,21 @@
         <link href="css/bootstrap.css" rel="stylesheet"/>
         <link href="css/bootstrap.theme.css" rel="stylesheet"/>
         <link href="font/font-awesome.min.css" rel="stylesheet"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <link href="css/base.css" rel="stylesheet"/>
         <link ng-repeat="stylesheet in appInfo.stylesheets" ng-href="app/{{appInfo.app}}/{{stylesheet}}"  rel="stylesheet" />
 
     </head>
     <body>
-        <div ng-controller="userInfo">   
-            <div class="navbar layer3">
+        <div ng-controller="userInfo">
+            <div class="navbar topbar">
                 <div class="navbar-inner">
                     <div class="navbar-brand ng-cloak" >{{appInfo.brand}}</div>
-                    <button type="button" class="btn btn-link dropdown-toggle pull-left ng-cloak" data-toggle="dropdown" tabindex="-1" ng-show="userInfo.loggedIn">
-                        <i class="icon-sort-down"></i>
+                    <!--<button type="button" class="btn btn-link dropdown-toggle pull-left ng-cloak" data-toggle="dropdown" tabindex="-1" ng-show="userInfo.loggedIn">
+                        <i class="icon-sort-down icon-2x"></i>
+                    </button>-->
+                    <button type="button" class="btn btn-link pull-left ng-cloak" ng-click="applistStatus()" ng-show="userInfo.loggedIn">
+                        <i class="icon-sort-down icon-2x"></i>
                     </button>
                     <ul class="dropdown-menu" role="menu">
                         <li ng-repeat="app in userInfo.apps" ng-show="currentAppCheck(app.href)"><a href="#/{{app.href}}">{{app.name}}</a></li>
@@ -57,8 +61,37 @@
                 </ul>
             </div>
         </div>
-        <div id="views" class="content" ng-view>
+        <div id="views" class="content" ng-view ng-style="">
          
+        </div>
+
+        <div class="applist ng-cloak" ng-show="applist">
+            <ul>
+                <li>
+                    <div class="al-img">
+                        <img src="img/fp.png"/>
+                    </div>
+                    <div class="al-text">
+                        Flavourpages
+                    </div>
+                </li>
+                <li>
+                    <div class="al-img">
+                        <img src="img/fs.png"/>
+                    </div>
+                    <div class="al-text">
+                        Flavoursnaps
+                    </div>
+                </li>
+                <li>
+                    <div class="al-img">
+                        <img src="img/fz.png"/>
+                    </div>
+                    <div class="al-text">
+                        Flavourzone
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

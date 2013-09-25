@@ -1,6 +1,6 @@
 <div id="app-flavourpages" ng-controller="fpControl">
-    <div class="searchbars">
-        <div class="col-lg-8">
+    <div class="searchbars col-lg-6">
+        <div class="col-lg-10">
             <i class="icon-{{inputData.icon}} inputlogo icon-large"></i>
             <div class="input-group">
                 <input type="text" class="form-control focus" placeholder="{{inputData.placeholder}}" ng-model="input" ng-enter="goBtn(input)">
@@ -22,8 +22,6 @@
             </div>
         </div>
     </div>
-    <div class="clearfix"></div>
-    <hr/>
     <div class="tab-content">
         <div class="tab-pane active fade in" id="tab-{{tabData.divID}}">
             <div ng-repeat="thumb in tabData.content | orderBy:'order' | filter:filterThumb">

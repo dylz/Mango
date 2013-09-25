@@ -4,7 +4,7 @@
 function pageStatus($scope,$http,$location,shareTab){
 	$scope.service = shareTab;
 	$scope.appInfo = [];
-	
+	$scope.applist = false;
 	$scope.$watch('service.retrieveTab()', function(data) {
     	if((data != '') && (data != undefined)){
     		split = data.split(';');
@@ -16,6 +16,19 @@ function pageStatus($scope,$http,$location,shareTab){
     		$scope.setSort();
     	}
 	});
+
+	$scope.applistStatus = function(){
+		if($scope.applist === false){
+			$scope.applist = true;
+		}
+		else{
+			$scope.applist = false;
+		}
+	}
+
+	$scope.heightFix = function(){
+		return { "min-height": $(window).height() - $('.topbar').height()-2};
+	}
 
 	$scope.setSort = function(){
 		$scope.tabSort = ['section','order'];
